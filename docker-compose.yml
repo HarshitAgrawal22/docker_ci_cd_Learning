@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nodejs:
+    image: postgres # this is pulled from hub.docker.com
+    ports:
+      - '5431:5431'
+    environment:
+      PORT: 9090
+  redis:
+    image: redis
+    ports: 
+      - '6379:6379'
+
