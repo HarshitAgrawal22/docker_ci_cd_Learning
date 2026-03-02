@@ -33,4 +33,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: harshitagrawal22/docker_ci_cd_learning:latest
+          tags: ghcr.io/harshitagrawal22/docker_ci_cd_learning:latest
