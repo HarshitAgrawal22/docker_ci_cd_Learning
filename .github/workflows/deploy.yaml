@@ -5,7 +5,7 @@ on:
     branches: ["main"]
 
 env:
-  IMAGE_NAME: ghcr.io/harshitagrawal22/docker_ci_cd_Learning
+  IMAGE_NAME: ghcr.io/harshitagrawal22/docker_ci_cd_learning
 
 jobs:
   build-and-push:
@@ -33,4 +33,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: harshitagrawal22/docker_ci_cd_Learning:latest
+          tags: harshitagrawal22/docker_ci_cd_learning:latest
