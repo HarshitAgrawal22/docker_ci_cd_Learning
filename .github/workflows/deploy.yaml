@@ -33,6 +33,10 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/harshitagrawal22/docker_ci_cd_learning:latest
+          tags: |
+      ${{ env.IMAGE_NAME }}:latest
+      ${{ env.IMAGE_NAME }}:${{ github.sha }}
       - name: Trigger Render Deploy
-        run: curl -X POST ${{ secrets.DEPLOYWEBHOOK }}
+        run:  |
+    echo "Triggering Render Deploy..."
+    curl -v -X POST "${{ secrets.DEPLOYWEBHOOK }}"
