@@ -34,9 +34,9 @@ jobs:
           context: .
           push: true
           tags: |
-      ${{ env.IMAGE_NAME }}:latest
-      ${{ env.IMAGE_NAME }}:${{ github.sha }}
+            ${{ env.IMAGE_NAME }}:latest
+            ${{ env.IMAGE_NAME }}:${{ github.sha }}
       - name: Trigger Render Deploy
-        run:  |
-    echo "Triggering Render Deploy..."
-    curl -v -X POST "${{ secrets.DEPLOYWEBHOOK }}"
+        run: |
+          echo "Triggering Render Deploy..."
+          curl -v -X POST "${{ secrets.DEPLOYWEBHOOK }}"
