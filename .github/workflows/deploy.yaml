@@ -35,4 +35,4 @@ jobs:
           push: true
           tags: ghcr.io/harshitagrawal22/docker_ci_cd_learning:latest
       - name: Trigger Render Deploy
-        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: curl -X POST ${{ secrets.DEPLOYWEBHOOK }}
